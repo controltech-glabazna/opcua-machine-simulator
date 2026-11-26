@@ -5,7 +5,7 @@
  */
 module.exports = {
     server: {
-        port: 4840,
+        port: 4841,
         resourcePath: "/UA/MachineSimulator",
         namespaceUri: "urn:controltech:machine-simulator",
         productName: "MachineSimulator",
