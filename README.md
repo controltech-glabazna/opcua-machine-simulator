@@ -21,12 +21,12 @@ Server vypíše endpoint a seznam NodeId. Ukončení: **Ctrl+C**.
 
 | Parametr  | Hodnota                                         |
 |-----------|-------------------------------------------------|
-| Endpoint  | `opc.tcp://localhost:4841/UA/MachineSimulator`  |
+| Endpoint  | `opc.tcp://localhost:4860/UA/MachineSimulator`  |
 | Security  | None (Security Mode None, Policy None)          |
 | Přihlášení| Anonymous                                       |
 | Namespace | `urn:controltech:machine-simulator` (obvykle `ns=2`) |
 
-Port je **4841**, protože standardní OPC UA port 4840 bývá obsazený systémovou službou
+Port je **4860**, protože standardní OPC UA port 4840 bývá obsazený systémovou službou
 (např. Local Discovery Server). Změnit ho lze v `config.js` (`server.port`).
 Testovací klient čte port ze stejného souboru.
 
@@ -99,9 +99,9 @@ Při chybě skončí s exit kódem 1.
 
 1. Spusť server (`npm start`).
 2. V UaExpert: **Server → Add…** → záložka *Advanced*, Endpoint URL
-   `opc.tcp://localhost:4841/UA/MachineSimulator`, Security Policy **None**,
+   `opc.tcp://localhost:4860/UA/MachineSimulator`, Security Policy **None**,
    Message Security Mode **None**, Authentication **Anonymous** → OK.
-   Případně v *Custom Discovery* zadej `opc.tcp://localhost:4841` a vyber endpoint *None*.
+   Případně v *Custom Discovery* zadej `opc.tcp://localhost:4860` a vyber endpoint *None*.
 3. **Connect**. Při dotazu na certifikát serveru zvol *Trust Server Certificate*.
 4. V *Address Space* rozbal `Objects → Machine1` a přetáhni PV/SP/Running do *Data Access View*.
    Hodnoty se aktualizují přes subscription.
